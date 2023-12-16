@@ -1,5 +1,5 @@
 # Import the create_cd_account and create_savings_account functions
-import sys
+from sys import exit
 from cd_account import create_cd_account
 from savings_account import create_savings_account
 
@@ -9,8 +9,8 @@ def main():
     and the length of months to determine the interest gained.
     It displays the interest earned on the savings and CD accounts and updates the balances.
     """
-    # Prompt the user to set the savings balance, interest rate, and months for the savings account.
     print("-" * 72)
+    # Prompt the user to set the savings balance, interest rate, and months for the savings account.
     input_validation = {'Savings Balance': False, 'Savings Interest': False, 'Savings Maturity': False}
 
     while True:
@@ -58,7 +58,7 @@ def main():
             if input("Would you like to try again? (Y/N):  ").lower() in ["y", "yes"]:
                 print("\n")
             else:
-                sys.exit("Better luck next time :)")
+                exit("Better luck next time :)")
 
 
     # Call the create_savings_account function and pass the variables from the user.
@@ -112,7 +112,7 @@ def main():
             if input("Would you like to try again? (Y/N):  ").lower() in ["y", "yes"]:
                 print("\n")
             else:
-                sys.exit("Better luck next time :)")
+                exit("Better luck next time :)")
 
     # Call the create_cd_account function and pass the variables from the user.
     updated_cd_balance, interest_earned = create_cd_account(cd_balance, cd_interest, cd_maturity)

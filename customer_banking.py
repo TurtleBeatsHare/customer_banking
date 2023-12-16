@@ -15,8 +15,8 @@ def main():
 
     while True:
         try:
-            # Check if variable exists and is a float
-            float(savings_balance)
+            # Check if variable exists and is a float if so, set input_validation True
+            savings_balance = float(savings_balance)
             input_validation['Savings Balance'] = True
         except:
             try:
@@ -30,7 +30,7 @@ def main():
                 pass
         
         try:
-            float(savings_interest)
+            savings_interest = float(savings_interest)
             input_validation['Savings Interest'] = True
         except:
             try:
@@ -40,7 +40,7 @@ def main():
                 pass
 
         try:
-            int(savings_maturity)
+            savings_maturity = int(savings_maturity)
             input_validation['Savings Maturity'] = True
         except:
             try:
@@ -74,7 +74,7 @@ def main():
 
     while True:
         try:
-            float(cd_balance)
+            cd_balance = float(cd_balance)
             input_validation['CD Balance'] = True
         except:
             try:
@@ -84,7 +84,7 @@ def main():
                 pass
         
         try:
-            float(cd_interest)
+            cd_interest = float(cd_interest)
             input_validation['CD Interest'] = True
         except:
             try:
@@ -94,7 +94,7 @@ def main():
                 pass
 
         try:
-            int(cd_maturity)
+            cd_maturity = int(cd_maturity)
             input_validation['CD Maturity'] = True
         except:
             try:
@@ -119,7 +119,7 @@ def main():
 
     # Print out the interest earned and updated CD account balance with interest earned for the given months.
     print(f"\nAfter {cd_maturity} months, the final CD account balance is ${updated_cd_balance:,.2f}.")
-    print(f"The account earned ${interest_earned:,.2f} of interest over that period.")
+    print(f"The account earned ${interest_earned:,.2f} of interest over that period.\n{'-' * 72}\n")
 
 if __name__ == "__main__":
     # Call the main function.

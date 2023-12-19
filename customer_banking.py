@@ -17,6 +17,8 @@ def main():
         try:
             # Check if variable exists and is a float if so, set input_validation True
             savings_balance = float(savings_balance)
+            # The next line only runs if the previous line executes correctly
+            # suggesting that the input has been received and is valid.
             input_validation['Savings Balance'] = True
         except:
             try:
